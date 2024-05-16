@@ -16,7 +16,7 @@ def restador():
     global acumulador
     for x in range(rango):
         a = acumulador - 5
-        # i in range(1000):
+        i in range(1000):
             pass
         acumulador = a
 
