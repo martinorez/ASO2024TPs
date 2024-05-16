@@ -8,17 +8,17 @@ def sumador():
     global acumulador
     for x in range(rango):
         a = acumulador + 5
-        acumulador = a
-        for i in range(1000):
+         in range(1000):
            pass
+        acumulador = a
 
 def restador():
     global acumulador
     for x in range(rango):
         a = acumulador - 5
+        # i in range(1000):
+            pass
         acumulador = a
-        for i in range(1000):
-             pass
 
 momento_arranque = time.perf_counter()
 thr1 = threading.Thread(target=sumador)
