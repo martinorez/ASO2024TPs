@@ -8,7 +8,7 @@ def sumador():
     global acumulador
     for x in range(rango):
         a = acumulador + 5
-         in range(1000):
+         for in range(1000):
            pass
         acumulador = a
 
@@ -16,7 +16,7 @@ def restador():
     global acumulador
     for x in range(rango):
         a = acumulador - 5
-        i in range(1000):
+        for i in range(1000):
             pass
         acumulador = a
 
