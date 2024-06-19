@@ -1,18 +1,12 @@
 #!/bin/bash
 
-# Lee el nombre del usuario
-echo "Ingrese un nombre: "
+echo -e "Ingrese un nombre: "
 read nombre
 
-# Hace una solicitud a la API de agify.io
-respuesta=$(curl -s "https://api.agify.io/?name=$nombre")
+respuesta=$(curl -s https://api.genderize.io/?name=$nombre | jq -r ".gender")
 
-# Utiliza jq para extraer el campo "gender" de la respuesta JSON
-genero=$(echo $respuesta | jq '.gender')
+if [[ "$respuesta" == "male" ]]; then
+    echo "$nombre--> Hombre"
 
-# Verifica si el género es nulo
-if [ -z "$genero" ]; then
-  echo "No se pudo determinar el género del nombre $nombre"
-else
-  echo "El género del nombre $nombre es: $genero"
+else echo "$nombre--> Mujer" 
 fi
